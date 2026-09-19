@@ -24,10 +24,10 @@ new_student = pd.DataFrame({
     'Attendance': [68, 88]
 })
 
-new_scaler = scaler.transform(new_student)
+new_student_scaler = scaler.transform(new_student)
 
-predictions = model.predict(new_scaler)
-probabilities = model.predict_proba(new_scaler)
+predictions = model.predict(new_student_scaler)
+probabilities = model.predict_proba(new_student_scaler)
 
 print(f"Student A (4 hrs, 68% attendance): Result = {predictions[0]} (Passed Probability {probabilities[0][1]*100:.2f}%)")
 print(f"Student A (8 hrs, 88% attendance): Result = {predictions[1]} (Passed Probability {probabilities[1][1]*100:.2f}%)")
