@@ -18,7 +18,7 @@ trained = pd.DataFrame({'kWh': [180, 400]})
 predict = model.predict(trained)
 
 for train, pred in zip(trained['kWh'], predict):
-    print(f"Predicted kWh for {train}: PHP {pred:.2f}")
+    print(f"Predicted Bill for {train} kWh: PHP {pred:.2f}")
 
 
 
