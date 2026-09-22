@@ -13,7 +13,6 @@ data = {
 }
 df = pd.DataFrame(data)
 
-# 2. Features and Target
 X = df[['CreditScore', 'Income']]
 y = df['Default']
 
